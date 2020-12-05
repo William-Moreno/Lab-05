@@ -125,3 +125,25 @@ $('.sort-btn').on('click', (e) => {
     $('.page1').hide();
   }
 });
+
+
+$('.single-image').on('click', e => {
+  console.log(e.target);
+  let meow = new Audio();
+  meow.src = './assets/cat-meow.wav';
+  meow.oncanplaythrough = function(){
+    meow.play();
+  };
+});
+
+
+function meow(url){
+  let audio = document.createElement('audio');
+  audio.src = url;
+  audio.play();
+
+}
+
+$('.gallery').on('click', 'div', function(){
+  meow('./assets/cat-meow.wav');
+});
