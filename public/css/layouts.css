@@ -43,6 +43,8 @@ img {
 	height: 25vh;
 	text-align: center;
 	margin: 8px;
+	overflow: hidden;
+
 }
 
 .gallery {
@@ -76,7 +78,6 @@ button {
 
 .modal-content {
   margin: 15% auto;
-  padding: 20px;
   width: 50%;
 }
 
