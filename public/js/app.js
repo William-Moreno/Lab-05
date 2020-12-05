@@ -140,6 +140,7 @@ $('.single-image').on('click', e => {
 function meow(url){
   let audio = document.createElement('audio');
   audio.src = url;
+  audio.volume = 0.10;
   audio.play();
 
 }
