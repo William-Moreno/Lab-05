@@ -41,16 +41,19 @@ const byTitles = (a, b) => {
   }
 };
 
-$.ajax({ url: './data/page-1.json', method: 'get', dataType: 'json' }).then((imageGallery) => {
+$.ajax({ url: './data/page-1.json', async: true, success: (imageGallery) => {
   imageGallery.forEach((imageJSONObject) =>
     hornImages.push(new HornImage(imageJSONObject, 'page1'))
   );
+}
 });
 
-$.ajax({ url: './data/page-2.json', method: 'get', dataType: 'json' }).then((imageGallery) => {
+$.ajax({ url: './data/page-2.json', async: true, success: (imageGallery) => {
   imageGallery.forEach((imageJSONObject) =>
     hornImages.push(new HornImage(imageJSONObject, 'page2'))
   );
+}
+}).then(() => {
   hornImages.forEach((image) => image.renderWithMustache());
   $('.page2').hide();
   hornImages.forEach((currentItem) => {
