@@ -29,10 +29,22 @@
       <template id="mustache-template" type="text/x-tmpl-mustache">
         <div class="single-image all {{keyword}} {{page}}">
           <h2>{{title}}</h2>
-          <img src="{{image_url}}" alt="{{title}}">
-          <p>{{description}}</p>
+          <img src="{{image_url}}" alt="{{description}}" title="{{title}}">
+          <p class="blurb">{{description}}</p>
         </div>
       </template>
+
+      <!-- The Modal -->
+      <div id="horn-modal" class="modal">
+
+        <!-- Modal content -->
+        <div id="content" class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+
+      </div>
+
       <ul class="gallery">
       </ul>
 

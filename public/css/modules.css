@@ -20,7 +20,7 @@ h1 {
 }
 h2 {
 	font-family: 'Texturina', serif;
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: bold;
 	text-transform: capitalize;
 }
@@ -36,7 +36,7 @@ footer {
 	padding: 10px;
 }
 
-button {
+.page-btn {
 	background-color: #301d69;
 	color: white;
 	text-decoration: none;
@@ -46,6 +46,39 @@ button {
 	border-radius: 4px;
 }
 
-button:hover {
+.sort-btn {
+	background-color: #301d69;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 6px 8px;
+	letter-spacing: 0.15rem;
+	border-radius: 4px;
+}
+
+.page-btn:hover, .sort-btn:hover {
 	cursor: pointer;
+}
+
+.modal {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+}
+
+.close {
+  color:red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
