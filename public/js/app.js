@@ -144,6 +144,19 @@ function meow(url){
 
 }
 
-$('.gallery').on('click', 'div', function(){
+$('.gallery').on('click', 'div', e => {
   meow('./assets/cat-meow.wav');
+  let selectedCard = $(e.target).closest('div');
+  console.log(selectedCard);
+  const cardText = selectedCard.find('p').text();
+  console.log(cardText);
+  const $modalText = $('#content p');
+  $modalText.text(cardText);
+  $('#horn-modal').show();
+
 });
+
+$('.close').on('click', e=>{
+  $('#horn-modal').hide();
+});
+
